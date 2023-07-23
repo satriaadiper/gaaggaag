@@ -8,8 +8,7 @@ DOWNLOAD_FOLDER = 'downloads'
 if not os.path.exists(DOWNLOAD_FOLDER):
     os.makedirs(DOWNLOAD_FOLDER)
 
-d = DoodStream()
-d.api_key = API_KEY
+d = DoodStream(API_KEY)
 
 def upload_video(file_id):
     file_path = os.path.join(DOWNLOAD_FOLDER, f"{file_id}.mp4")
